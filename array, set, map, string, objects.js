@@ -12,7 +12,7 @@
   // create new array of default size and fill it with empty values (initially "empty items" not "undefined" and this is not preferred)
       let arr = new Array(26).fill(0);
 
-  // create array of arrays
+  // create "empty" array of arrays
       let arr = new Array(size).fill().map(() => []);
 
   // create a 2D array
@@ -25,6 +25,9 @@
 
   // compare two arrays
       JSON.stringify(arr1) == JSON.stringify(arr2)
+
+   // array to string:
+	let str = arr.join('') // by default it will join my "," if argument is empty, you can customize it eg: '' will simply merge all, '.' will merge with "." between elements
 
  // String -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    // string to char array
