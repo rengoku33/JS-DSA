@@ -6,6 +6,9 @@
    // "%" - modulus operator returns remainder,   "/" - returns quotient
 	10%2 == 0 /* true */  10/2 /* 5 */
 
+   // max || min value initialize
+	let max = Infinity, min = -Infinity
+
 // SET ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    // array to set and vice verca: 
       	let sett = new Set(arr);
@@ -31,6 +34,9 @@
 
    // array to string:
 	let str = arr.join('') // by default it will join my "," if argument is empty, you can customize it eg: '' will simply merge all, '.' will merge with "." between elements
+
+   // find max or min in an array
+	let max = Math.max(...arr)
 
  // String -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    // string to char array
