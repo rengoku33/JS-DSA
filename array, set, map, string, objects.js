@@ -48,10 +48,17 @@
    // set value or increment value
 	map.set(key, (map.get(value) || 0) + 1);
 
+   // a map is ordered by its entry, hence we dump it into a list, sort that list and enter them to a new map in order
+   // sort map by keys (ascending)
+	const sortedByKey = new Map(
+	  [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]))   // for string keys
+	//[...map.entries()].sort((a, b) => a[0] - b[0])                // for numeric keys
+	);
 
-
-
-
+   // sort map by values (ascending)
+	const sortedByValue = new Map(
+	  [...map.entries()].sort((a, b) => a[1] - b[1])   // for numberic values a[1] = value a[0] = key
+	);
 
 // ----------------------------------------------------------------------------------------------- PPACTICES ------------------------------------------------------------------------------------------------------------
    // skip dupelicates ( used for permutation / subsets )
